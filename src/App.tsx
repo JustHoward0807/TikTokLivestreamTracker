@@ -5,7 +5,7 @@ import Leaderboard from "./components/Leaderboard";
 import ScoreInputBar from "./components/ScoreInputBar";
 import { useScoreboard } from "./hooks/useScoreboard";
 import type { StreamerId } from "./types";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
 
 type MobileTab = "streamers" | "leaderboard";
 
