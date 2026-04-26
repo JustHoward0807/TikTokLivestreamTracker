@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: system-ui, "Noto Sans TC", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
