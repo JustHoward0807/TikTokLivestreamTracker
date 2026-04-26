@@ -1,5 +1,6 @@
 import type { Streamer } from '../types';
 import { computeRanking } from '../utils/ranking';
+import { exportToExcel } from '../utils/exportExcel';
 
 type Props = {
   streamers: Streamer[];
@@ -48,6 +49,18 @@ export default function Leaderboard({ streamers }: Props) {
             })}
           </ol>
         )}
+      </div>
+
+      {/* Export button */}
+      <div className="px-4 py-3 border-t border-gray-800">
+        <button
+          onClick={() => exportToExcel(streamers)}
+          disabled={streamers.length === 0}
+          className="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-emerald-700 hover:bg-emerald-600 disabled:bg-gray-700 disabled:text-gray-500 disabled:cursor-not-allowed text-white text-sm font-semibold transition-colors cursor-pointer"
+        >
+          <span>📊</span>
+          <span>匯出 Excel</span>
+        </button>
       </div>
     </aside>
   );
